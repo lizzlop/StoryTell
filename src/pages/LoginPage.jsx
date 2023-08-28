@@ -26,7 +26,7 @@ export const LoginPage = () => {
         <div className="w-full md:w-1/3 grid place-items-center gap-6">
           {/* TODO: Change the mt y mb, encontrar la manera de alinear eso mejor */}
           <p className="italic font-serif text-customOrange text-3xl mt-16 mb-10">
-            StoryTell
+            StoryTells
           </p>
           <p className=" text-customGray text-lg">Welcome to StoryTell</p>
           <InputCustom text="Usuarname or email" type="text" value="lizzlop" />
