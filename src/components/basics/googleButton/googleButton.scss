@@ -1,0 +1,14 @@
+@import "../../../styles/styles.sass";
+
+.buttonGoogle {
+  background: #ffffff;
+  padding: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.buttonGoogle:hover {
+  border: 2px solid $customBlue;
+}

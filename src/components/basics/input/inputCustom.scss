@@ -1,0 +1,16 @@
+@import "../../../styles/styles.sass";
+
+.input {
+  border: none;
+  border-bottom: 1px solid $customOrange;
+  padding: 5px;
+  outline: none;
+}
+
+.input:focus {
+  border-bottom: 1px solid $customBlue;
+}
+
+.input::placeholder {
+  color: #ccc;
+}
