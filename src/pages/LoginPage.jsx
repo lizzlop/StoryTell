@@ -13,6 +13,14 @@ export const LoginPage = () => {
     to: { x: 0 },
   });
 
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  //TODO: Change the mt y mb, encontrar la manera de alinear eso mejor
+
   return (
     <>
       <div className="flex justify-center">
@@ -23,15 +31,30 @@ export const LoginPage = () => {
           }}>
           <img src={landing} alt="Landing image" className="w-full h-full" />
         </animated.div>
-        <div className="w-full md:w-1/3 grid place-items-center gap-6">
-          {/* TODO: Change the mt y mb, encontrar la manera de alinear eso mejor */}
-          <p className="italic font-serif text-customOrange text-3xl mt-16 mb-10">
+        <form
+          className="w-full md:w-1/3 grid place-items-center gap-5"
+          onSubmit={handleSubmit(onSubmit)}>
+          <p className="italic font-serif text-customOrange text-3xl mt-16 mb-7">
             StoryTells
           </p>
-          <p className=" text-customGray text-lg">Welcome to StoryTell</p>
-          <InputCustom text="Usuarname or email" type="text" value="lizzlop" />
-          <InputCustom text="Password" type="password" value="1234" />
-          <ButtonCustom text="Sign in" />
+          <p className=" text-customGray text-lg font-sans">
+            Welcome to StoryTell
+          </p>
+          <InputCustom
+            text="Username or email"
+            type="text"
+            value="lizzlop"
+            name="username"
+            register={{ ...register("username") }}
+          />
+          <InputCustom
+            text="Password"
+            type="password"
+            name="password"
+            value="1234"
+            register={{ ...register("password") }}
+          />
+          <ButtonCustom text="Sign in" type="submit" />
           <div className="flex items-center">
             <hr className="w-24 h-0.3 bg-gray-300"></hr>
             <p className=" text-customGray m-1 text-sm">or</p>
@@ -39,14 +62,16 @@ export const LoginPage = () => {
           </div>
           <GoogleButton />
           <div className="flex items-center">
-            <p className=" text-customGray text-sm mr-1">New in StoryTell?</p>
+            <p className=" text-customGray text-sm mr-1 font-sans">
+              New in StoryTell?
+            </p>
             <Link
               to="/register"
-              className="text-customOrange text-sm hover:text-customBlue">
+              className="text-customOrange text-sm hover:text-customBlue font-sans">
               Create account
             </Link>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

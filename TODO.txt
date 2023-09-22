@@ -1,0 +1,7 @@
+//TODO
+- [ ]  useForm
+- [ ]  Firebase
+- [ ]  Rutas públicas y privadas
+- [ ]  Sección 25 (402-409)
+
+Link https://chat.openai.com/share/50358da7-4fd0-4de8-af09-59a976ae3fe2

@@ -14,9 +14,9 @@ export const Navbar = () => {
     <>
       <nav className="bg-white ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center no-underline">
             <img src={icon} className="h-12 mr-1" alt="Storytell Logo" />
-            <span className="italic font-serif text-customOrange text-2xl ">
+            <span className="italic font-serif text-customOrange text-2xl">
               StoryTell
             </span>
           </Link>
@@ -35,24 +35,24 @@ export const Navbar = () => {
             )}
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="list-none font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 {/* TODO: Cambiar links cuando se tengan las páginas */}
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center no-underline">
                   <span className="italic font-serif text-customOrange text-xl ">
                     Library
                   </span>
                 </Link>
               </li>
               <li>
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center no-underline">
                   <span className="italic font-serif text-customOrange text-xl ">
                     Groups
                   </span>
                 </Link>
               </li>
               <li>
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center no-underline">
                   <span className="italic font-serif text-customOrange text-xl ">
                     Profile
                   </span>
